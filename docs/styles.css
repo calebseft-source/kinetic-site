@@ -84,12 +84,15 @@ img, video { max-width: 100%; display: block; }
 .reel.live { opacity: .55; }
 .hero.reel-live .backdrop { opacity: 0; }
 .backdrop { transition: opacity 1.2s ease; }
-.hero-mark { position: relative; display: flex; align-items: flex-end; gap: .02em; }
-.mark.big { width: clamp(84px, 16vw, 250px); height: auto; aspect-ratio: 72 / 56; }
-h1 {
+/* The mark is the K of the word: 1.4 times the cap height, standing on the
+   same baseline, as the menu draws it. The K spans 48 of the 56 viewBox
+   units and its foot sits 4 units above the bottom, hence the numbers. */
+h1.hero-mark {
+  position: relative; white-space: nowrap;
   font-size: clamp(72px, 15.5vw, 240px); letter-spacing: .1em; color: var(--text);
-  padding-bottom: .04em; line-height: .78;
+  line-height: 1;
 }
+.mark.big { display: inline-block; height: 1.18em; width: auto; vertical-align: -.084em; margin-right: -.06em; }
 .sub {
   position: relative;
   font-family: var(--display); font-weight: 500; font-size: clamp(15px, 1.6vw, 22px);
