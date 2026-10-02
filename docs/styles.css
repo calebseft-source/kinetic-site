@@ -137,11 +137,13 @@ section { padding: clamp(80px, 12vw, 160px) var(--gutter); }
 .arrow svg { width: 14px; height: 14px; }
 .strip {
   display: flex; gap: 20px; overflow-x: auto; overscroll-behavior-x: contain;
-  scroll-snap-type: x proximity; padding: 28px var(--gutter) 18px 0;
+  padding: 28px var(--gutter) 18px 0;
   scroll-behavior: smooth;
   scrollbar-width: thin; scrollbar-color: var(--hair) transparent;
 }
-.strip figure { margin: 0; flex: 0 0 auto; scroll-snap-align: start; }
+/* No scroll snapping: with images wider than a wheel step, snapping pulled
+   every step straight back to the first image and the strip never moved. */
+.strip figure { margin: 0; flex: 0 0 auto; }
 /* Each shot at the size it was taken, scaled down only when the screen is
    narrower than the image. Nothing is ever enlarged. */
 .strip img { width: auto; height: auto; max-width: min(100%, calc(100vw - var(--gutter) * 2)); max-height: 70vh; border: 1px solid var(--hair); }
