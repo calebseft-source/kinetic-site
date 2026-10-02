@@ -138,6 +138,8 @@ section { padding: clamp(80px, 12vw, 160px) var(--gutter); }
   transition: background .15s;
 }
 .btn:hover { background: #5be0a3; }
+.btn.soon { background: transparent; color: var(--dim); border: 1px solid var(--hair); cursor: default; }
+.btn.soon:hover { background: transparent; }
 .note { font-family: var(--display); font-weight: 500; font-size: 13px; letter-spacing: .14em; text-transform: uppercase; color: var(--dim); }
 
 .foot {
