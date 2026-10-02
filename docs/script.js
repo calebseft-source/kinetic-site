@@ -20,18 +20,27 @@
     hero.classList.add('reel-live');
   });
 
-  // A mouse wheel only scrolls up and down, so on the strip it drives the
-  // sideways scroll instead; the arrows step one screenshot at a time.
+  // The wheel is left to the page. The strip moves by its arrows, a trackpad,
+  // shift plus wheel, or by dragging it with the mouse.
   var strip = document.getElementById('strip');
   if (strip) {
-    strip.addEventListener('wheel', function (e) {
-      if (Math.abs(e.deltaY) <= Math.abs(e.deltaX)) return;
-      var atStart = strip.scrollLeft <= 0 && e.deltaY < 0;
-      var atEnd = strip.scrollLeft + strip.clientWidth >= strip.scrollWidth - 1 && e.deltaY > 0;
-      if (atStart || atEnd) return;
-      e.preventDefault();
-      strip.scrollLeft += e.deltaY;
-    }, { passive: false });
+    var dragging = false, startX = 0, startLeft = 0, moved = false;
+    strip.addEventListener('pointerdown', function (e) {
+      if (e.pointerType !== 'mouse' || e.button !== 0) return;
+      dragging = true; moved = false; startX = e.clientX; startLeft = strip.scrollLeft;
+      strip.style.scrollBehavior = 'auto';
+      strip.setPointerCapture(e.pointerId);
+    });
+    strip.addEventListener('pointermove', function (e) {
+      if (!dragging) return;
+      var dx = e.clientX - startX;
+      if (Math.abs(dx) > 4) moved = true;
+      strip.scrollLeft = startLeft - dx;
+    });
+    function release() { dragging = false; strip.style.scrollBehavior = ''; }
+    strip.addEventListener('pointerup', release);
+    strip.addEventListener('pointercancel', release);
+    strip.addEventListener('click', function (e) { if (moved) e.preventDefault(); }, true);
     function step(dir) {
       var first = strip.querySelector('figure');
       var w = first ? first.getBoundingClientRect().width + 20 : strip.clientWidth * .8;
