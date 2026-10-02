@@ -92,7 +92,9 @@ h1.hero-mark {
   font-size: clamp(72px, 15.5vw, 240px); letter-spacing: .1em; color: var(--text);
   line-height: 1;
 }
-.mark.big { display: inline-block; height: 1.18em; width: auto; vertical-align: -.084em; margin-right: -.06em; }
+/* Both dimensions set in em, so no browser has to work the width out from
+   the viewBox; one that did not drew the K the full width of the screen. */
+.mark.big { display: inline-block; width: 1.517em; height: 1.18em; max-width: none; vertical-align: -.084em; margin-right: -.06em; }
 .sub {
   position: relative;
   font-family: var(--display); font-weight: 500; font-size: clamp(15px, 1.6vw, 22px);
