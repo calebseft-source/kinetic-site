@@ -68,11 +68,22 @@ img, video { max-width: 100%; display: block; }
   display: grid; place-content: center; justify-items: center; gap: 22px;
   padding: 0 var(--gutter); background: var(--bg-deep); overflow: hidden;
 }
+/* Stills crossfade slowly behind the mark until a reel exists; the reel
+   covers them the moment it can play. Both sit under a dark scrim. */
+.backdrop { position: absolute; inset: 0; }
+.backdrop::after { content: ""; position: absolute; inset: 0; background: rgba(8, 9, 10, .62); }
+.slide {
+  position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
+  opacity: 0; transition: opacity 2.4s ease;
+}
+.slide.on { opacity: 1; }
 .reel {
   position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
   opacity: 0; transition: opacity 1.2s ease;
 }
 .reel.live { opacity: .55; }
+.hero.reel-live .backdrop { opacity: 0; }
+.backdrop { transition: opacity 1.2s ease; }
 .hero-mark { position: relative; display: flex; align-items: flex-end; gap: .02em; }
 .mark.big { width: clamp(84px, 16vw, 250px); height: auto; aspect-ratio: 72 / 56; }
 h1 {
@@ -114,9 +125,20 @@ section { padding: clamp(80px, 12vw, 160px) var(--gutter); }
 
 /* -------------------------------------------------------------- gallery */
 .gallery { padding-right: 0; border-top: 1px solid var(--hair); }
+.gallery-head { display: flex; align-items: center; justify-content: space-between; padding-right: var(--gutter); }
+.gallery-head .kicker { margin: 0; }
+.arrows { display: flex; gap: 8px; }
+.arrow {
+  width: 44px; height: 44px; display: grid; place-items: center;
+  background: transparent; color: var(--text); border: 1px solid var(--hair); cursor: pointer;
+  transition: border-color .15s, color .15s;
+}
+.arrow:hover { border-color: var(--text); }
+.arrow svg { width: 14px; height: 14px; }
 .strip {
   display: flex; gap: 20px; overflow-x: auto; overscroll-behavior-x: contain;
-  scroll-snap-type: x proximity; padding-bottom: 18px; padding-right: var(--gutter);
+  scroll-snap-type: x proximity; padding: 28px var(--gutter) 18px 0;
+  scroll-behavior: smooth;
   scrollbar-width: thin; scrollbar-color: var(--hair) transparent;
 }
 .strip figure { margin: 0; flex: 0 0 auto; scroll-snap-align: start; }
