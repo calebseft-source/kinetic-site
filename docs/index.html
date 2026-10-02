@@ -6,10 +6,10 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; media-src 'self'; font-src 'self'; connect-src 'self'; form-action 'none'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <title>Kinetic</title>
-  <meta name="description" content="Kinetic is a CS2 internal cheat built for offline play against bots. Material chams, sub tick bunny hop, aimbot, triggerbot and a menu that reads like a tool, not a toy.">
+  <meta name="description" content="Kinetic is a CS2 internal cheat. It runs inside the game, reads the engine directly, and is built in the open for offline play against bots.">
   <meta property="og:title" content="Kinetic">
-  <meta property="og:description" content="CS2 internal cheat. Material chams, sub tick bunny hop, aimbot, triggerbot. Built in the open, tested against bots.">
-  <meta property="og:image" content="https://kinetic.ong/assets/chams.webp">
+  <meta property="og:description" content="CS2 internal cheat. Runs inside the game, reads the engine directly, built in the open.">
+  <meta property="og:image" content="https://kinetic.ong/assets/ak-holo.webp">
   <meta property="og:url" content="https://kinetic.ong/">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
@@ -19,7 +19,7 @@
 <body>
 
 <header class="top">
-  <a class="brand" href="#" aria-label="Kinetic">
+  <a class="brand" href="#top" aria-label="Kinetic">
     <svg class="mark" viewBox="-40 -28 72 56" aria-hidden="true">
       <polygon class="stem" points="-14,-24 -5,-24 -9,24 -18,24"/>
       <polygon class="arm" points="-3,-2 15,-24 27,-24 8,-2"/>
@@ -27,118 +27,79 @@
       <polygon class="wedge w1" points="-19,-13.4 -19,-8.6 -29,-11"/>
       <polygon class="wedge w2" points="-20,-1.4 -20,3.4 -35,1"/>
       <polygon class="wedge w3" points="-21,10.6 -21,15.4 -31,13"/>
-      <line class="edge" x1="27" y1="-24" x2="8" y2="-2"/>
-      <line class="edge" x1="12" y1="4" x2="29" y2="24"/>
     </svg>
     <span class="word">INETIC</span>
   </a>
   <nav class="nav" aria-label="Sections">
-    <a href="#what">What it is</a>
-    <a href="#features">Features</a>
-    <a class="nav-cta" href="#discord">Discord</a>
+    <a href="#about">About</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#discord">Discord</a>
   </nav>
 </header>
 
 <main>
 
   <section class="hero" id="top">
-    <div class="screen">
-      <video class="reel" id="reel" autoplay muted loop playsinline preload="metadata" poster="assets/chams.webp">
-        <source src="assets/reel.mp4" type="video/mp4">
-      </video>
-      <div class="scrim" aria-hidden="true"></div>
-      <div class="grid" aria-hidden="true"></div>
+    <video class="reel" id="reel" autoplay muted loop playsinline preload="metadata" aria-hidden="true">
+      <source src="assets/reel.mp4" type="video/mp4">
+    </video>
+    <div class="hero-mark">
+      <svg class="mark big" viewBox="-40 -28 72 56" aria-hidden="true">
+        <polygon class="stem" points="-14,-24 -5,-24 -9,24 -18,24"/>
+        <polygon class="arm" points="-3,-2 15,-24 27,-24 8,-2"/>
+        <polygon class="arm" points="1,4 12,4 29,24 17,24"/>
+        <polygon class="wedge w1" points="-19,-13.4 -19,-8.6 -29,-11"/>
+        <polygon class="wedge w2" points="-20,-1.4 -20,3.4 -35,1"/>
+        <polygon class="wedge w3" points="-21,10.6 -21,15.4 -31,13"/>
+        <line class="edge" x1="27" y1="-24" x2="8" y2="-2"/>
+        <line class="edge" x1="12" y1="4" x2="29" y2="24"/>
+      </svg>
+      <h1>INETIC</h1>
     </div>
-
-    <div class="hero-copy">
-      <p class="eyebrow"><span class="dot"></span>CS2 internal cheat</p>
-      <h1>
-        <span class="line">See everything.</span>
-        <span class="line">Land every jump.</span>
-        <span class="line accent">Miss nothing.</span>
-      </h1>
-      <p class="lede">Kinetic runs inside the game, not beside it. Every body is painted by the game's own renderer, every jump is written on the tick it belongs to, and nothing on screen is a guess.</p>
-      <div class="actions">
-        <a class="btn primary" href="#discord">Join the Discord</a>
-        <a class="btn ghost" href="#features">Watch the features</a>
-      </div>
-    </div>
-
-    <ul class="ticker" aria-label="Feature list">
-      <li>Material chams</li><li>Sub tick bunny hop</li><li>Aimbot</li><li>Triggerbot</li><li>Silent autofire</li><li>No recoil</li><li>Glow</li><li>Radar</li><li>Hit feedback</li><li>World colours</li><li>Auto stop</li><li>Skeleton ESP</li>
-      <li>Material chams</li><li>Sub tick bunny hop</li><li>Aimbot</li><li>Triggerbot</li><li>Silent autofire</li><li>No recoil</li><li>Glow</li><li>Radar</li><li>Hit feedback</li><li>World colours</li><li>Auto stop</li><li>Skeleton ESP</li>
-    </ul>
+    <p class="sub">CS2 internal cheat</p>
+    <a class="scroll" href="#about" aria-label="Scroll to about">
+      <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M1 4l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>
+    </a>
   </section>
 
-  <section class="what" id="what">
-    <div class="what-head">
-      <p class="kicker">01 What Kinetic is</p>
-      <h2>A cheat that reads the game instead of guessing at it.</h2>
-    </div>
-    <div class="what-body">
-      <p>Most cheats paint boxes over a screenshot of the game and hope the pixels line up. Kinetic is injected into Counter-Strike 2 and talks to the engine on its own terms. It asks the schema system where every field lives, so a game update changes nothing. It hooks the scene renderer, so chams know whose body they are painting. It writes the jump into the input the game is about to read, so a bunny hop lands on the exact tick.</p>
-      <p>It is built for offline play against bots on an insecure server, by one person, in the open. Every feature on this page has been tested in a real match before it was written here.</p>
-      <dl class="facts">
-        <div><dt>Offsets</dt><dd>Resolved at runtime, zero hardcoded</dd></div>
-        <div><dt>Ground contact</dt><dd>One tick per landing, measured</dd></div>
-        <div><dt>Chams</dt><dd>Game materials, per entity</dd></div>
-        <div><dt>Menu</dt><dd>Own widget kit, true proportions on stretched res</dd></div>
-      </dl>
-    </div>
+  <section class="about" id="about">
+    <p class="kicker">About</p>
+    <p class="text">Kinetic is injected into Counter-Strike 2 and works from the inside. It asks the engine's own schema where every field lives, so an update changes nothing. It paints bodies through the game's material system, so chams know exactly whose body they are on. It writes a jump into the input the game is about to read, so a bunny hop lands on its tick.</p>
+    <p class="text">It is one person's project, built in the open and tested against bots on an insecure server. Nothing is for sale.</p>
+    <dl class="spec">
+      <div><dt>Chams</dt><dd>Game materials, per entity</dd></div>
+      <div><dt>Movement</dt><dd>Sub tick bunny hop, auto strafe, quick stop</dd></div>
+      <div><dt>Aim</dt><dd>Aimbot, triggerbot, silent autofire, no recoil</dd></div>
+      <div><dt>Visuals</dt><dd>ESP, skeleton, glow, radar, world colours, hit feedback</dd></div>
+      <div><dt>Offsets</dt><dd>Resolved at runtime, none hardcoded</dd></div>
+      <div><dt>Menu</dt><dd>Own widget kit, true proportions on stretched res</dd></div>
+    </dl>
   </section>
 
-  <section class="features" id="features">
-    <div class="features-head">
-      <p class="kicker">02 Features</p>
-      <h2>Everything in the build today.</h2>
+  <section class="gallery" id="gallery">
+    <p class="kicker">Gallery</p>
+    <div class="strip" tabindex="0" aria-label="Screenshots, scroll sideways">
+      <figure><img src="assets/ak-holo.webp" width="2000" height="1073" alt="Holographic chams on the hands and rifle, with players painted violet across a training yard." loading="lazy"><figcaption>Holographic viewmodel, violet players</figcaption></figure>
+      <figure><img src="assets/m4-wire.webp" width="2000" height="1068" alt="Wireframe chams on an M4 with players painted solid pink." loading="lazy"><figcaption>Wireframe viewmodel, flat players</figcaption></figure>
+      <figure><img src="assets/awp-xray.webp" width="2000" height="854" alt="See through chams on an AWP, every part of the rifle visible in violet." loading="lazy"><figcaption>See through viewmodel</figcaption></figure>
+      <figure><img src="assets/ak-chrome.webp" width="1621" height="904" alt="Chrome chams on an AK and gloves." loading="lazy"><figcaption>Chrome viewmodel</figcaption></figure>
+      <figure><img src="assets/dust-chams.webp" width="1492" height="872" alt="A full team of bots painted green in the open and red behind cover on Dust." loading="lazy"><figcaption>Material chams, green visible, red through cover</figcaption></figure>
+      <figure><img src="assets/menu-aim.png" width="1146" height="774" alt="The Kinetic menu, Aim tab: aimbot, hitboxes, checks, humanise." loading="lazy"><figcaption>Menu, Aim</figcaption></figure>
+      <figure><img src="assets/menu-visuals.png" width="1146" height="773" alt="The Kinetic menu, Visuals tab: player ESP, box, bars, camera, skeleton." loading="lazy"><figcaption>Menu, Visuals</figcaption></figure>
     </div>
-
-    <figure class="demo">
-      <img src="assets/chams.webp" alt="Material chams on a full team of bots on Dust: green where visible, red where the body is behind cover." width="1492" height="872">
-      <figcaption>Material chams, Dust, 2026. Green in the open, red through cover, nothing on teammates or corpses.</figcaption>
-    </figure>
-
-    <ol class="list">
-      <li>
-        <h3>Material chams</h3>
-        <p>The game's own material system builds the paint and the scene renderer applies it per body. Exact team colours, every distance, corpses go plain the moment they drop.</p>
-      </li>
-      <li>
-        <h3>Sub tick bunny hop</h3>
-        <p>The jump is written at the predicted landing inside the tick. One tick of ground contact on nearly every landing, which is as fast as the engine allows.</p>
-      </li>
-      <li>
-        <h3>Aimbot, triggerbot, silent autofire</h3>
-        <p>Field of view and smoothing you set, auto stop that counter strafes through the movement buttons before the shot, and no recoil on top.</p>
-      </li>
-      <li>
-        <h3>ESP and radar</h3>
-        <p>Boxes, health, armour, weapon, skeleton, glow, a radar, and hit feedback. Flashed, scoped and defusing called out when they apply.</p>
-      </li>
-      <li>
-        <h3>Movement</h3>
-        <p>Auto strafe that follows your mouse through the game's strafe keys, quick stop, and a third person view the game draws itself.</p>
-      </li>
-      <li>
-        <h3>A menu that behaves</h3>
-        <p>Square, solid, flat. Group boxes titled in the border, help on hover, binds shown as keys, and a watermark you can drag.</p>
-      </li>
-    </ol>
   </section>
 
   <section class="discord" id="discord">
-    <p class="kicker">03 Discord</p>
-    <h2>Watch it get built.</h2>
-    <p>Progress, test footage, and the updates as they land. Nothing is for sale right now.</p>
-    <a class="btn primary big" href="#" id="discord-link">Join the Discord</a>
-    <p class="note">Invite link goes live with the server.</p>
+    <p class="kicker">Discord</p>
+    <p class="text">Progress, test footage and updates as they land.</p>
+    <a class="btn" href="#" id="discord-link">Join the Discord</a>
+    <p class="note">Invite goes live with the server.</p>
   </section>
 
 </main>
 
 <footer class="foot">
   <span>Kinetic</span>
-  <span>CS2 internal cheat, built for offline play against bots.</span>
   <span>kinetic.ong</span>
 </footer>
 
