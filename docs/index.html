@@ -31,7 +31,7 @@
     <span class="word">INETIC</span>
   </a>
   <nav class="nav" aria-label="Sections">
-    <a href="#about">About</a>
+    <a href="#about">Features</a>
     <a href="#gallery">Gallery</a>
     <a href="#discord">Discord</a>
   </nav>
@@ -68,17 +68,43 @@
   </section>
 
   <section class="about" id="about">
-    <p class="kicker">About</p>
-    <p class="text">Kinetic is injected into Counter-Strike 2 and works from the inside. It asks the engine's own schema where every field lives, so an update changes nothing. It paints bodies through the game's material system, so chams know exactly whose body they are on. It writes a jump into the input the game is about to read, so a bunny hop lands on its tick.</p>
-    <p class="text">It is one person's project, built in the open and tested against bots on an insecure server. Nothing is for sale.</p>
-    <dl class="spec">
-      <div><dt>Chams</dt><dd>Game materials, per entity</dd></div>
-      <div><dt>Movement</dt><dd>Sub tick bunny hop, auto strafe, quick stop</dd></div>
-      <div><dt>Aim</dt><dd>Aimbot, triggerbot, silent autofire, no recoil</dd></div>
-      <div><dt>Visuals</dt><dd>ESP, skeleton, glow, radar, world colours, hit feedback</dd></div>
-      <div><dt>Offsets</dt><dd>Resolved at runtime, none hardcoded</dd></div>
-      <div><dt>Menu</dt><dd>Own widget kit, true proportions on stretched res</dd></div>
-    </dl>
+    <div class="about-head">
+      <p class="kicker">Features</p>
+      <h2>Everything in one menu.</h2>
+      <p class="text">Aim, visuals, movement and skins, legit or loud, in a menu that reads like a tool. Offsets are resolved at runtime from the game's own schema, so a CS2 update does not take it down.</p>
+    </div>
+
+    <div class="shots">
+      <figure><img src="assets/menu-aim.png" width="1146" height="774" alt="The Kinetic menu, Aim tab." loading="lazy"><figcaption>Aim</figcaption></figure>
+      <figure><img src="assets/menu-visuals.png" width="1146" height="773" alt="The Kinetic menu, Visuals tab." loading="lazy"><figcaption>Visuals</figcaption></figure>
+    </div>
+
+    <ul class="groups">
+      <li>
+        <h3>Aim</h3>
+        <p>Aimbot with field of view, smoothing and curve. Hitbox selection with multipoint. Visible only, not through smoke, hold off while flashed. Humanise with reaction and switch delay.</p>
+      </li>
+      <li>
+        <h3>Trigger and autofire</h3>
+        <p>Triggerbot on the crosshair, silent autofire, no recoil, and auto stop that counter strafes before the shot.</p>
+      </li>
+      <li>
+        <h3>Visuals</h3>
+        <p>Boxes, health and armour bars, names, weapons, distance, skeleton, glow, radar, hit feedback and world colours. Flashed, scoped and defusing called out.</p>
+      </li>
+      <li>
+        <h3>Chams</h3>
+        <p>Painted through the game's own material system. Flat, glow, chrome, wireframe and see through, with separate colours for visible and behind cover, for players, hands and weapons.</p>
+      </li>
+      <li>
+        <h3>Movement</h3>
+        <p>Sub tick bunny hop with hold, toggle and always. Auto strafe that follows the mouse. Quick stop. Third person and a custom field of view.</p>
+      </li>
+      <li>
+        <h3>Skins</h3>
+        <p>Skin changer for weapons, knives and gloves, applied in the game's own renderer.</p>
+      </li>
+    </ul>
   </section>
 
   <section class="gallery" id="gallery">

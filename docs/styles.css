@@ -110,18 +110,21 @@ section { padding: clamp(80px, 12vw, 160px) var(--gutter); }
   font-family: var(--display); font-weight: 600; font-size: 14px; letter-spacing: .22em;
   text-transform: uppercase; color: var(--accent); margin-bottom: 28px;
 }
-.about { max-width: 68ch; }
-.about .text { font-size: clamp(1.25rem, 2vw, 1.6rem); line-height: 1.5; }
-.about .text + .text { margin-top: 1.2em; color: var(--dim); font-size: 1.15rem; }
-.spec {
-  margin: 56px 0 0; padding: 0;
-  display: grid; grid-template-columns: max-content 1fr; column-gap: 32px; row-gap: 0;
+.about { display: grid; row-gap: 64px; }
+h2 { font-size: clamp(48px, 6.5vw, 108px); text-transform: uppercase; letter-spacing: -.005em; line-height: .9; margin-bottom: 28px; }
+.about-head .text { font-size: clamp(1.15rem, 1.5vw, 1.4rem); line-height: 1.5; max-width: 62ch; }
+.shots { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.shots figure { margin: 0; min-width: 0; }
+.shots img { width: 100%; max-width: 1146px; height: auto; border: 1px solid var(--hair); }
+.shots figcaption, .groups {
+  list-style: none; margin: 0; padding: 0;
+  display: grid; grid-template-columns: repeat(3, 1fr); column-gap: clamp(24px, 4vw, 64px);
   border-top: 1px solid var(--hair);
 }
-.spec div { display: contents; }
-.spec dt, .spec dd { padding: 14px 0; border-bottom: 1px solid var(--hair); margin: 0; }
-.spec dt { font-family: var(--display); font-weight: 600; font-size: 14px; letter-spacing: .18em; text-transform: uppercase; color: var(--dim); line-height: 1.9; }
-.spec dd { font-size: 1.05rem; }
+.groups li { padding: 28px 0 32px; border-bottom: 1px solid var(--hair); min-width: 0; }
+.groups h3 { font-family: var(--display); font-weight: 700; font-size: 26px; letter-spacing: .04em; text-transform: uppercase; margin: 0 0 12px; }
+.groups h3::before { content: ""; display: inline-block; width: 10px; height: 10px; background: var(--accent); margin-right: 14px; vertical-align: 2px; }
+.groups p { margin: 0; font-size: 1.05rem; color: var(--text); }
 
 /* -------------------------------------------------------------- gallery */
 .gallery { padding-right: 0; border-top: 1px solid var(--hair); }
@@ -147,10 +150,6 @@ section { padding: clamp(80px, 12vw, 160px) var(--gutter); }
 /* Each shot at the size it was taken, scaled down only when the screen is
    narrower than the image. Nothing is ever enlarged. */
 .strip img { width: auto; height: auto; max-width: min(100%, calc(100vw - var(--gutter) * 2)); max-height: 70vh; border: 1px solid var(--hair); }
-.strip figcaption {
-  margin-top: 12px; font-family: var(--display); font-weight: 500; font-size: 14px;
-  letter-spacing: .14em; text-transform: uppercase; color: var(--dim);
-}
 
 /* -------------------------------------------------------------- discord */
 .discord { border-top: 1px solid var(--hair); display: grid; justify-items: start; gap: 24px; }
@@ -172,11 +171,15 @@ section { padding: clamp(80px, 12vw, 160px) var(--gutter); }
   font-family: var(--display); font-weight: 500; font-size: 13px; letter-spacing: .16em; text-transform: uppercase; color: var(--dim);
 }
 
+@media (max-width: 1100px) {
+  .groups { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 760px) {
+  .shots { grid-template-columns: 1fr; }
+}
 @media (max-width: 640px) {
   .nav { gap: 18px; }
-  .spec { grid-template-columns: 1fr; }
-  .spec dt { border-bottom: 0; padding-bottom: 0; }
-  .spec dd { padding-top: 4px; }
+  .groups { grid-template-columns: 1fr; }
 }
 @media (prefers-reduced-motion: reduce) {
   .mark .wedge, .scroll { animation: none; }
