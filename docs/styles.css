@@ -7,6 +7,7 @@
 
 
 
+
 /* Layout: a storefront in the Velocity format. Floating pill nav, a split
    hero with art on the right, portrait product cards, badge led centred
    sections, a columned footer. Product pages: a buy panel, requirement tiles,
@@ -99,12 +100,16 @@ button { font: inherit; color: inherit; }
 h1 { font-size: clamp(54px, 7.2vw, 104px); line-height: .95; }
 .lede { margin-top: 20px; max-width: 48ch; color: var(--dim); font-size: 1.1rem; }
 .actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
-.hero-art { position: relative; align-self: end; justify-self: end; width: 100%; max-width: 520px; -webkit-mask-image: linear-gradient(to bottom, black 78%, transparent); mask-image: linear-gradient(to bottom, black 78%, transparent); }
+.hero-art { position: relative; align-self: end; justify-self: end; width: 100%; max-width: 520px; }
 .hero-art::before {
-  content: ""; position: absolute; left: 50%; top: 55%; width: 120%; height: 90%; transform: translate(-50%, -50%); pointer-events: none;
-  background: radial-gradient(closest-side, rgba(62, 207, 142, .28), rgba(62, 207, 142, .08) 55%, transparent 100%);
+  content: ""; position: absolute; left: 50%; top: 58%; width: 150%; height: 110%; transform: translate(-50%, -50%); pointer-events: none;
+  background: radial-gradient(ellipse closest-side, rgba(62, 207, 142, .22) 0%, rgba(62, 207, 142, .07) 45%, rgba(62, 207, 142, 0) 100%);
 }
-.hero-art img { position: relative; width: 82%; height: auto; margin: 0 auto; display: block; filter: drop-shadow(0 0 40px rgba(62, 207, 142, .25)); }
+.hero-art img {
+  position: relative; width: 82%; height: auto; margin: 0 auto; display: block;
+  filter: drop-shadow(0 0 36px rgba(62, 207, 142, .22));
+  -webkit-mask-image: linear-gradient(to bottom, black 72%, transparent 100%); mask-image: linear-gradient(to bottom, black 72%, transparent 100%);
+}
 .hero-ghost {
   position: absolute; left: 50%; top: 22%; transform: translateX(-50%); display: flex; align-items: center; gap: .02em; white-space: nowrap; pointer-events: none;
   font-family: var(--display); font-weight: 800; font-size: clamp(96px, 13vw, 190px); line-height: 1; letter-spacing: .02em; text-transform: uppercase;
