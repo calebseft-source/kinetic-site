@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; media-src 'self'; font-src 'self'; connect-src 'self'; form-action 'none'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>CS2 Internal</title>
+  <meta name="description" content="Kinetic CS2 Internal: aimbot, triggerbot, ESP, material chams, sub tick movement and a skin changer for Counter-Strike 2.">
+  <meta property="og:title" content="Kinetic CS2 Internal">
+  <meta property="og:image" content="https://kinetic.ong/assets/ak-holo.webp">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+<header class="top solid">
+  <a class="brand" href="/" aria-label="Kinetic">
+    <svg class="mark" viewBox="-40 -28 72 56" aria-hidden="true"><polygon class="stem" points="-14,-24 -5,-24 -9,24 -18,24"/><polygon class="arm" points="-3,-2 15,-24 27,-24 8,-2"/><polygon class="arm" points="1,4 12,4 29,24 17,24"/><polygon class="wedge w1" points="-19,-13.4 -19,-8.6 -29,-11"/><polygon class="wedge w2" points="-20,-1.4 -20,3.4 -35,1"/><polygon class="wedge w3" points="-21,10.6 -21,15.4 -31,13"/></svg>
+    <span class="word">INETIC</span>
+  </a>
+  <nav class="nav" aria-label="Site">
+    <a href="/">Home</a>
+    <a href="/#products" aria-current="page">Products</a>
+    <a href="/status.html">Status</a>
+    <a href="/#discord">Discord</a>
+  </nav>
+</header>
+
+<main class="product">
+
+  <p class="crumb"><a href="/#products">Products</a> / Counter-Strike 2</p>
+
+  <section class="product-hero">
+    <video class="banner" autoplay muted loop playsinline preload="metadata" poster="/assets/ak-holo.webp" aria-hidden="true">
+      <source src="/assets/reel.mp4" type="video/mp4">
+    </video>
+    <div class="product-head">
+      <p class="game">Counter-Strike 2</p>
+      <h1>CS2 Internal</h1>
+      <p class="tags"><span class="pill testing">In testing</span><span class="pill">Internal</span><span class="pill">Steam</span></p>
+    </div>
+  </section>
+
+  <section class="buy">
+    <div class="tiers">
+      <p class="kicker">Pricing</p>
+      <ul class="tier-list">
+        <li><span>1 day</span><span class="dim">soon</span></li>
+        <li><span>1 week</span><span class="dim">soon</span></li>
+        <li><span>1 month</span><span class="dim">soon</span></li>
+      </ul>
+      <span class="btn soon">Not on sale yet</span>
+      <p class="note">Keys will go out through Discord first.</p>
+    </div>
+    <dl class="reqs">
+      <p class="kicker">Requirements</p>
+      <div><dt>System</dt><dd>Windows 10 or 11, 64 bit</dd></div>
+      <div><dt>Processor</dt><dd>Intel or AMD</dd></div>
+      <div><dt>Platform</dt><dd>Steam</dd></div>
+      <div><dt>Type</dt><dd>Internal, injected</dd></div>
+      <div><dt>Spoofer</dt><dd>Not included</dd></div>
+      <div><dt>Menu</dt><dd>Insert opens, End unloads</dd></div>
+    </dl>
+  </section>
+
+  <section class="features">
+    <p class="kicker">Features</p>
+    <div class="feature-cols">
+      <div>
+        <h3>Aim</h3>
+        <ul>
+          <li>Aimbot with field of view, smoothing and curve</li>
+          <li>Hitbox selection with multipoint</li>
+          <li>Visible only, not through smoke</li>
+          <li>Hold off while flashed</li>
+          <li>Humanise: reaction and switch delay</li>
+          <li>Triggerbot on the crosshair</li>
+          <li>Silent autofire</li>
+          <li>No recoil</li>
+          <li>Auto stop before the shot</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Visuals</h3>
+        <ul>
+          <li>Boxes, health and armour bars</li>
+          <li>Names, weapons, distance, money</li>
+          <li>Skeleton and glow</li>
+          <li>Radar</li>
+          <li>Hit feedback</li>
+          <li>World colours</li>
+          <li>Flashed, scoped and defusing called out</li>
+          <li>Custom field of view, third person</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Chams</h3>
+        <ul>
+          <li>Painted through the game's own material system</li>
+          <li>Flat, glow, chrome, wireframe, see through</li>
+          <li>Separate colours for visible and behind cover</li>
+          <li>Players, hands and weapons each on their own</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Movement and skins</h3>
+        <ul>
+          <li>Sub tick bunny hop: hold, toggle, always</li>
+          <li>Auto strafe that follows the mouse</li>
+          <li>Quick stop</li>
+          <li>Skin changer for weapons, knives and gloves</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="gallery">
+    <div class="gallery-head">
+      <p class="kicker">Gallery</p>
+      <div class="arrows">
+        <button class="arrow" id="prev" type="button" aria-label="Previous screenshot"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M8 1 3 6l5 5" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></button>
+        <button class="arrow" id="next" type="button" aria-label="Next screenshot"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M4 1l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></button>
+      </div>
+    </div>
+    <div class="strip" id="strip" tabindex="0" aria-label="Screenshots, scroll sideways">
+      <figure><img src="/assets/skin-ak.webp" width="1809" height="1101" alt="Skin changer: a floral AK with lime sport gloves under a purple night sky." loading="lazy"><figcaption>Skin changer, AK and gloves</figcaption></figure>
+      <figure><img src="/assets/chams-blue.webp" width="2000" height="1257" alt="Blue material chams on a full team of bots across the yard." loading="lazy"><figcaption>Material chams, full team</figcaption></figure>
+      <figure><img src="/assets/menu-aim.png" width="1146" height="774" alt="The Kinetic menu, Aim tab." loading="lazy"><figcaption>Menu, Aim</figcaption></figure>
+      <figure><img src="/assets/esp-knife-gloves.webp" width="1768" height="1094" alt="Box ESP with names, money and weapon labels, a red knife and crane gloves in hand." loading="lazy"><figcaption>ESP, knife and gloves</figcaption></figure>
+      <figure><img src="/assets/skin-awp.webp" width="1633" height="794" alt="Skin changer: a Dragon Lore AWP with lime sport gloves." loading="lazy"><figcaption>Skin changer, AWP</figcaption></figure>
+      <figure><img src="/assets/esp-skeleton.webp" width="1924" height="1257" alt="Box ESP with names, health bars and skeletons on two bots." loading="lazy"><figcaption>Box ESP, health, skeleton</figcaption></figure>
+      <figure><img src="/assets/menu-visuals.png" width="1146" height="773" alt="The Kinetic menu, Visuals tab." loading="lazy"><figcaption>Menu, Visuals</figcaption></figure>
+      <figure><img src="/assets/knife-gloves.webp" width="1481" height="999" alt="Skin changer: an emerald karambit with purple gloves." loading="lazy"><figcaption>Skin changer, knife and gloves</figcaption></figure>
+      <figure><img src="/assets/glow.webp" width="2000" height="1246" alt="Glow and skeleton on two bots with a skinned AK." loading="lazy"><figcaption>Glow and skeleton</figcaption></figure>
+      <figure><img src="/assets/ak-holo.webp" width="2000" height="1073" alt="Holographic chams on the hands and rifle, with players painted violet." loading="lazy"><figcaption>Holographic viewmodel</figcaption></figure>
+      <figure><img src="/assets/ak-chrome.webp" width="1621" height="904" alt="Chrome chams on an AK and gloves." loading="lazy"><figcaption>Chrome viewmodel</figcaption></figure>
+      <figure><img src="/assets/m4-wire.webp" width="2000" height="1068" alt="Wireframe chams on an M4 with players painted solid pink." loading="lazy"><figcaption>Wireframe viewmodel</figcaption></figure>
+      <figure><img src="/assets/awp-xray.webp" width="2000" height="854" alt="See through chams on an AWP." loading="lazy"><figcaption>See through viewmodel</figcaption></figure>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="foot-brand">
+    <span class="word">KINETIC</span>
+    <p>Built by people who play. Tested before release.</p>
+  </div>
+  <div class="foot-col">
+    <p class="foot-head">Platform</p>
+    <a href="/#products">Products</a>
+    <a href="/status.html">Status</a>
+    <a href="/#discord">Support</a>
+  </div>
+  <div class="foot-col">
+    <p class="foot-head">Legal</p>
+    <a href="/terms.html">Terms of Service</a>
+    <a href="/privacy.html">Privacy Policy</a>
+    <a href="/refunds.html">Refund Policy</a>
+  </div>
+  <p class="copy">kinetic.ong</p>
+</footer>
+
+<script src="/script.js"></script>
+</body>
+</html>

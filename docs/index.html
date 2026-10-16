@@ -6,148 +6,117 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; media-src 'self'; font-src 'self'; connect-src 'self'; form-action 'none'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <title>Kinetic</title>
-  <meta name="description" content="Kinetic is a CS2 internal cheat. It runs inside the game, reads the engine directly, and is built in the open for offline play against bots.">
+  <meta name="description" content="Kinetic builds internal cheats for Counter-Strike 2 and Deadlock. One team, one menu, tested before release.">
   <meta property="og:title" content="Kinetic">
-  <meta property="og:description" content="CS2 internal cheat. Runs inside the game, reads the engine directly, built in the open.">
+  <meta property="og:description" content="Internal cheats for Counter-Strike 2 and Deadlock. Tested before release.">
   <meta property="og:image" content="https://kinetic.ong/assets/ak-holo.webp">
   <meta property="og:url" content="https://kinetic.ong/">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-40 -28 72 56'%3E%3Crect x='-40' y='-28' width='72' height='56' fill='%230b0c0e'/%3E%3Cpolygon points='-14,-24 -5,-24 -9,24 -18,24' fill='%2329895e'/%3E%3Cpolygon points='-3,-2 15,-24 27,-24 8,-2' fill='%233ecf8e'/%3E%3Cpolygon points='1,4 12,4 29,24 17,24' fill='%233ecf8e'/%3E%3Cpolygon points='-19,-13.4 -19,-8.6 -29,-11' fill='%233ecf8e' opacity='.45'/%3E%3Cpolygon points='-20,-1.4 -20,3.4 -35,1' fill='%233ecf8e' opacity='.8'/%3E%3Cpolygon points='-21,10.6 -21,15.4 -31,13' fill='%233ecf8e' opacity='.45'/%3E%3C/svg%3E">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
 
-<header class="top">
-  <a class="brand" href="#top" aria-label="Kinetic">
-    <svg class="mark" viewBox="-40 -28 72 56" aria-hidden="true">
-      <polygon class="stem" points="-14,-24 -5,-24 -9,24 -18,24"/>
-      <polygon class="arm" points="-3,-2 15,-24 27,-24 8,-2"/>
-      <polygon class="arm" points="1,4 12,4 29,24 17,24"/>
-      <polygon class="wedge w1" points="-19,-13.4 -19,-8.6 -29,-11"/>
-      <polygon class="wedge w2" points="-20,-1.4 -20,3.4 -35,1"/>
-      <polygon class="wedge w3" points="-21,10.6 -21,15.4 -31,13"/>
-    </svg>
+<header class="top solid">
+  <a class="brand" href="/" aria-label="Kinetic">
+    <svg class="mark" viewBox="-40 -28 72 56" aria-hidden="true"><polygon class="stem" points="-14,-24 -5,-24 -9,24 -18,24"/><polygon class="arm" points="-3,-2 15,-24 27,-24 8,-2"/><polygon class="arm" points="1,4 12,4 29,24 17,24"/><polygon class="wedge w1" points="-19,-13.4 -19,-8.6 -29,-11"/><polygon class="wedge w2" points="-20,-1.4 -20,3.4 -35,1"/><polygon class="wedge w3" points="-21,10.6 -21,15.4 -31,13"/></svg>
     <span class="word">INETIC</span>
   </a>
-  <nav class="nav" aria-label="Sections">
-    <a href="#about">Features</a>
-    <a href="#gallery">Gallery</a>
-    <a href="#discord">Discord</a>
+  <nav class="nav" aria-label="Site">
+    <a href="/" aria-current="page">Home</a>
+    <a href="/#products">Products</a>
+    <a href="/status.html">Status</a>
+    <a href="/#discord">Discord</a>
   </nav>
 </header>
 
 <main>
 
-  <section class="hero" id="top">
-    <div class="backdrop" aria-hidden="true">
-      <img class="slide" src="assets/skin-ak.webp" alt="" width="1809" height="1101">
-      <img class="slide" src="assets/chams-blue.webp" alt="" width="2000" height="1257">
-      <img class="slide" src="assets/knife-gloves.webp" alt="" width="1481" height="999">
-      <img class="slide" src="assets/ak-holo.webp" alt="" width="2000" height="1073">
-      <img class="slide" src="assets/esp-knife-gloves.webp" alt="" width="1768" height="1094">
-      <img class="slide" src="assets/skin-awp.webp" alt="" width="1633" height="794">
-      <img class="slide" src="assets/glow.webp" alt="" width="2000" height="1246">
-    </div>
+  <section class="hero split" id="top">
     <video class="reel" id="reel" autoplay muted loop playsinline preload="metadata" aria-hidden="true">
-      <source src="assets/reel.mp4" type="video/mp4">
+      <source src="/assets/reel.mp4" type="video/mp4">
     </video>
-    <h1 class="hero-mark">
-      <svg class="mark big" viewBox="-40 -28 72 56" aria-hidden="true">
-        <polygon class="stem" points="-14,-24 -5,-24 -9,24 -18,24"/>
-        <polygon class="arm" points="-3,-2 15,-24 27,-24 8,-2"/>
-        <polygon class="arm" points="1,4 12,4 29,24 17,24"/>
-        <polygon class="wedge w1" points="-19,-13.4 -19,-8.6 -29,-11"/>
-        <polygon class="wedge w2" points="-20,-1.4 -20,3.4 -35,1"/>
-        <polygon class="wedge w3" points="-21,10.6 -21,15.4 -31,13"/>
-        <line class="edge" x1="27" y1="-24" x2="8" y2="-2"/>
-        <line class="edge" x1="12" y1="4" x2="29" y2="24"/>
-      </svg><span>INETIC</span>
-    </h1>
-    <p class="sub">CS2 internal cheat</p>
-    <a class="scroll" href="#about" aria-label="Scroll to about">
-      <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M1 4l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>
-    </a>
-  </section>
-
-  <section class="about" id="about">
-    <div class="about-head">
-      <p class="kicker">Features</p>
-      <h2>Everything in one menu.</h2>
-      <p class="text">Aim, visuals, movement and skins, legit or loud, in a menu that reads like a tool. Offsets are resolved at runtime from the game's own schema, so a CS2 update does not take it down.</p>
-    </div>
-
-    <div class="shots">
-      <figure><img src="assets/menu-aim.png" width="1146" height="774" alt="The Kinetic menu, Aim tab." loading="lazy"><figcaption>Aim</figcaption></figure>
-      <figure><img src="assets/menu-visuals.png" width="1146" height="773" alt="The Kinetic menu, Visuals tab." loading="lazy"><figcaption>Visuals</figcaption></figure>
-    </div>
-
-    <ul class="groups">
-      <li>
-        <h3>Aim</h3>
-        <p>Aimbot with field of view, smoothing and curve. Hitbox selection with multipoint. Visible only, not through smoke, hold off while flashed. Humanise with reaction and switch delay.</p>
-      </li>
-      <li>
-        <h3>Trigger and autofire</h3>
-        <p>Triggerbot on the crosshair, silent autofire, no recoil, and auto stop that counter strafes before the shot.</p>
-      </li>
-      <li>
-        <h3>Visuals</h3>
-        <p>Boxes, health and armour bars, names, weapons, distance, skeleton, glow, radar, hit feedback and world colours. Flashed, scoped and defusing called out.</p>
-      </li>
-      <li>
-        <h3>Chams</h3>
-        <p>Painted through the game's own material system. Flat, glow, chrome, wireframe and see through, with separate colours for visible and behind cover, for players, hands and weapons.</p>
-      </li>
-      <li>
-        <h3>Movement</h3>
-        <p>Sub tick bunny hop with hold, toggle and always. Auto strafe that follows the mouse. Quick stop. Third person and a custom field of view.</p>
-      </li>
-      <li>
-        <h3>Skins</h3>
-        <p>Skin changer for weapons, knives and gloves, applied in the game's own renderer.</p>
-      </li>
-    </ul>
-  </section>
-
-  <section class="gallery" id="gallery">
-    <div class="gallery-head">
-      <p class="kicker">Gallery</p>
-      <div class="arrows">
-        <button class="arrow" id="prev" type="button" aria-label="Previous screenshot"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M8 1 3 6l5 5" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></button>
-        <button class="arrow" id="next" type="button" aria-label="Next screenshot"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M4 1l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></button>
+    <div class="hero-copy">
+      <p class="eyebrow">Counter-Strike 2 and Deadlock</p>
+      <h1>Built for the games we play.</h1>
+      <p class="lede">Internal cheats, one menu across both games, updated when the game updates and tested before anything ships. Support from the people who wrote it, on Discord.</p>
+      <div class="actions">
+        <a class="btn" href="#products">See the products</a>
+        <a class="btn ghost" href="#discord">Join Discord</a>
       </div>
     </div>
-    <div class="strip" id="strip" tabindex="0" aria-label="Screenshots, scroll sideways">
-      <figure><img src="assets/skin-ak.webp" width="1809" height="1101" alt="Skin changer: a floral AK with lime sport gloves under a purple night sky." loading="lazy"><figcaption>Skin changer, AK and gloves</figcaption></figure>
-      <figure><img src="assets/chams-blue.webp" width="2000" height="1257" alt="Blue material chams on a full team of bots across the yard." loading="lazy"><figcaption>Material chams, full team</figcaption></figure>
-      <figure><img src="assets/menu-aim.png" width="1146" height="774" alt="The Kinetic menu, Aim tab: aimbot, hitboxes, checks, humanise." loading="lazy"><figcaption>Menu, Aim</figcaption></figure>
-      <figure><img src="assets/esp-knife-gloves.webp" width="1768" height="1094" alt="Box ESP with names, money and weapon labels on five bots, a red knife and crane gloves in hand." loading="lazy"><figcaption>ESP, skin changer knife and gloves</figcaption></figure>
-      <figure><img src="assets/skin-awp.webp" width="1633" height="794" alt="Skin changer: a Dragon Lore AWP with lime sport gloves." loading="lazy"><figcaption>Skin changer, AWP</figcaption></figure>
-      <figure><img src="assets/esp-skeleton.webp" width="1924" height="1257" alt="Box ESP with names, health bars and skeletons on two bots." loading="lazy"><figcaption>Box ESP, health, skeleton</figcaption></figure>
-      <figure><img src="assets/menu-visuals.png" width="1146" height="773" alt="The Kinetic menu, Visuals tab: player ESP, box, bars, camera, skeleton." loading="lazy"><figcaption>Menu, Visuals</figcaption></figure>
-      <figure><img src="assets/knife-gloves.webp" width="1481" height="999" alt="Skin changer: an emerald karambit with purple gloves, the Kinetic watermark top left." loading="lazy"><figcaption>Skin changer, knife and gloves</figcaption></figure>
-      <figure><img src="assets/glow.webp" width="2000" height="1246" alt="Glow and skeleton on two bots with a skinned AK." loading="lazy"><figcaption>Glow and skeleton</figcaption></figure>
-      <figure><img src="assets/ak-holo.webp" width="2000" height="1073" alt="Holographic chams on the hands and rifle, with players painted violet across a training yard." loading="lazy"><figcaption>Holographic viewmodel, violet players</figcaption></figure>
-      <figure><img src="assets/ak-chrome.webp" width="1621" height="904" alt="Chrome chams on an AK and gloves." loading="lazy"><figcaption>Chrome viewmodel</figcaption></figure>
-      <figure><img src="assets/m4-wire.webp" width="2000" height="1068" alt="Wireframe chams on an M4 with players painted solid pink." loading="lazy"><figcaption>Wireframe viewmodel, flat players</figcaption></figure>
-      <figure><img src="assets/awp-xray.webp" width="2000" height="854" alt="See through chams on an AWP, every part of the rifle visible in violet." loading="lazy"><figcaption>See through viewmodel</figcaption></figure>
+  </section>
+
+  <section class="products" id="products">
+    <div class="head">
+      <p class="kicker">Products</p>
+      <h2>Two games. One menu.</h2>
+    </div>
+    <div class="cards">
+      <a class="card" href="/products/cs2-internal.html">
+        <img src="/assets/ak-holo.webp" width="2000" height="1073" alt="" loading="lazy">
+        <div class="card-body">
+          <p class="game">Counter-Strike 2</p>
+          <h3>CS2 Internal</h3>
+          <p class="meta"><span class="pill testing">In testing</span><span class="price">Pricing soon</span></p>
+        </div>
+      </a>
+      <a class="card" href="/products/deadlock-internal.html">
+        <div class="card-art dl" aria-hidden="true"><svg class="mark" viewBox="-40 -28 72 56" aria-hidden="true"><polygon class="stem" points="-14,-24 -5,-24 -9,24 -18,24"/><polygon class="arm" points="-3,-2 15,-24 27,-24 8,-2"/><polygon class="arm" points="1,4 12,4 29,24 17,24"/><polygon class="wedge w1" points="-19,-13.4 -19,-8.6 -29,-11"/><polygon class="wedge w2" points="-20,-1.4 -20,3.4 -35,1"/><polygon class="wedge w3" points="-21,10.6 -21,15.4 -31,13"/></svg></div>
+        <div class="card-body">
+          <p class="game">Deadlock</p>
+          <h3>Deadlock Internal</h3>
+          <p class="meta"><span class="pill dev">In development</span><span class="price">Pricing soon</span></p>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <section class="trio">
+    <div>
+      <h3>Support</h3>
+      <p>Real people on Discord, the same ones writing the code.</p>
+    </div>
+    <div>
+      <h3>Updates</h3>
+      <p>Offsets resolve from the game itself, so most patches change nothing. When one does, it's fixed before it's back on the status page.</p>
+    </div>
+    <div>
+      <h3>Testing</h3>
+      <p>Every build is played before it ships. The status page is updated by hand, not by a bot.</p>
     </div>
   </section>
 
   <section class="discord" id="discord">
     <p class="kicker">Discord</p>
-    <p class="text">Progress, test footage and updates as they land.</p>
+    <h2>Updates as they land.</h2>
+    <p class="text">Status, test footage, support, and the keys when they exist.</p>
     <span class="btn soon">Coming soon</span>
   </section>
 
 </main>
 
 <footer class="foot">
-  <span>Kinetic</span>
-  <span>kinetic.ong</span>
+  <div class="foot-brand">
+    <span class="word">KINETIC</span>
+    <p>Built by people who play. Tested before release.</p>
+  </div>
+  <div class="foot-col">
+    <p class="foot-head">Platform</p>
+    <a href="/#products">Products</a>
+    <a href="/status.html">Status</a>
+    <a href="/#discord">Support</a>
+  </div>
+  <div class="foot-col">
+    <p class="foot-head">Legal</p>
+    <a href="/terms.html">Terms of Service</a>
+    <a href="/privacy.html">Privacy Policy</a>
+    <a href="/refunds.html">Refund Policy</a>
+  </div>
+  <p class="copy">kinetic.ong</p>
 </footer>
 
-<script src="script.js"></script>
+<script src="/script.js"></script>
 </body>
 </html>
