@@ -6,115 +6,153 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; media-src 'self'; font-src 'self'; connect-src 'self'; form-action 'none'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <title>Kinetic</title>
-  <meta name="description" content="Kinetic builds internal cheats for Counter-Strike 2 and Deadlock. One team, one menu, tested before release.">
+  <meta name="description" content="Internal cheats for Counter-Strike 2 and Deadlock. Tested before release, supported on Discord.">
   <meta property="og:title" content="Kinetic">
-  <meta property="og:description" content="Internal cheats for Counter-Strike 2 and Deadlock. Tested before release.">
+  <meta property="og:description" content="Internal cheats for Counter-Strike 2 and Deadlock. Tested before release, supported on Discord.">
   <meta property="og:image" content="https://kinetic.ong/assets/ak-holo.webp">
-  <meta property="og:url" content="https://kinetic.ong/">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-
-<header class="top solid">
-  <a class="brand" href="/" aria-label="Kinetic">
-    <svg class="mark" viewBox="-40 -28 72 56" aria-hidden="true"><polygon class="stem" points="-14,-24 -5,-24 -9,24 -18,24"/><polygon class="arm" points="-3,-2 15,-24 27,-24 8,-2"/><polygon class="arm" points="1,4 12,4 29,24 17,24"/><polygon class="wedge w1" points="-19,-13.4 -19,-8.6 -29,-11"/><polygon class="wedge w2" points="-20,-1.4 -20,3.4 -35,1"/><polygon class="wedge w3" points="-21,10.6 -21,15.4 -31,13"/></svg>
-    <span class="word">INETIC</span>
-  </a>
-  <nav class="nav" aria-label="Site">
-    <a href="/" aria-current="page">Home</a>
-    <a href="/#products">Products</a>
-    <a href="/status.html">Status</a>
-    <a href="/#discord">Discord</a>
-  </nav>
+<header class="topbar">
+  <div class="topbar-in">
+    <a class="brand" href="/" aria-label="Kinetic">
+      <svg class="mark" viewBox="-40 -28 72 56" aria-hidden="true"><polygon class="stem" points="-14,-24 -5,-24 -9,24 -18,24"/><polygon class="arm" points="-3,-2 15,-24 27,-24 8,-2"/><polygon class="arm" points="1,4 12,4 29,24 17,24"/><polygon class="wedge w1" points="-19,-13.4 -19,-8.6 -29,-11"/><polygon class="wedge w2" points="-20,-1.4 -20,3.4 -35,1"/><polygon class="wedge w3" points="-21,10.6 -21,15.4 -31,13"/></svg>
+      <span class="word">INETIC<span class="tld">.ong</span></span>
+    </a>
+    <nav class="pillnav" aria-label="Site">
+      <a href="/" aria-current="page"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8l6-5 6 5v6H9v-4H7v4H2z" fill="none" stroke="currentColor" stroke-width="1.3"/></svg>Home</a>
+      <a href="/products.html" ><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 5l6-3 6 3v6l-6 3-6-3zM2 5l6 3 6-3M8 8v6" fill="none" stroke="currentColor" stroke-width="1.3"/></svg>Products</a>
+      <a href="/status.html" ><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M1 9h3l2-5 3 9 2-6 1 2h3" fill="none" stroke="currentColor" stroke-width="1.3"/></svg>Status</a>
+      <a href="/#discord" ><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 4a12 12 0 0110 0l1 7-3 2-1-2H6l-1 2-3-2zM6 9h.01M10 9h.01" fill="none" stroke="currentColor" stroke-width="1.3"/></svg>Discord</a>
+    </nav>
+    <a class="account" href="/#discord"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="5.5" r="2.8" fill="none" stroke="currentColor" stroke-width="1.3"/><path d="M2.5 14a5.5 5.5 0 0111 0" fill="none" stroke="currentColor" stroke-width="1.3"/></svg>My Account</a>
+  </div>
 </header>
 
 <main>
 
-  <section class="hero split" id="top">
-    <video class="reel" id="reel" autoplay muted loop playsinline preload="metadata" aria-hidden="true">
-      <source src="/assets/reel.mp4" type="video/mp4">
-    </video>
-    <div class="hero-copy">
-      <p class="eyebrow">Counter-Strike 2 and Deadlock</p>
-      <h1>Built for the games we play.</h1>
-      <p class="lede">Internal cheats, one menu across both games, updated when the game updates and tested before anything ships. Support from the people who wrote it, on Discord.</p>
-      <div class="actions">
-        <a class="btn" href="#products">See the products</a>
-        <a class="btn ghost" href="#discord">Join Discord</a>
+  <section class="hero">
+    <div class="hero-in">
+      <div class="hero-copy">
+        <h1>Inside the game.<br><span class="accent">Ahead of it.</span></h1>
+        <p class="lede">Internal cheats for Counter-Strike 2 and Deadlock. Aimbot, full ESP, chams, movement. One menu, both games.</p>
+        <div class="actions">
+          <a class="btn primary" href="/products.html"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>Get Started</a>
+          <a class="btn dark" href="#discord"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 4a12 12 0 0110 0l1 7-3 2-1-2H6l-1 2-3-2zM6 9h.01M10 9h.01" fill="none" stroke="currentColor" stroke-width="1.3"/></svg>Join Discord</a>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <img src="/assets/hero-art.webp" width="1080" height="1094" alt="">
       </div>
     </div>
   </section>
 
   <section class="products" id="products">
-    <div class="head">
-      <p class="kicker">Products</p>
-      <h2>Two games. One menu.</h2>
-    </div>
-    <div class="cards">
-      <a class="card" href="/products/cs2-internal.html">
-        <img src="/assets/ak-holo.webp" width="2000" height="1073" alt="" loading="lazy">
-        <div class="card-body">
-          <p class="game">Counter-Strike 2</p>
-          <h3>CS2 Internal</h3>
-          <p class="meta"><span class="pill testing">In testing</span><span class="price">Pricing soon</span></p>
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <h2>Our <span class="accent">Products</span></h2>
+          <p class="sub">Counter-Strike 2 and Deadlock. Both internal.</p>
         </div>
-      </a>
-      <a class="card" href="/products/deadlock-internal.html">
-        <div class="card-art dl" aria-hidden="true"><svg class="mark" viewBox="-40 -28 72 56" aria-hidden="true"><polygon class="stem" points="-14,-24 -5,-24 -9,24 -18,24"/><polygon class="arm" points="-3,-2 15,-24 27,-24 8,-2"/><polygon class="arm" points="1,4 12,4 29,24 17,24"/><polygon class="wedge w1" points="-19,-13.4 -19,-8.6 -29,-11"/><polygon class="wedge w2" points="-20,-1.4 -20,3.4 -35,1"/><polygon class="wedge w3" points="-21,10.6 -21,15.4 -31,13"/></svg></div>
-        <div class="card-body">
-          <p class="game">Deadlock</p>
-          <h3>Deadlock Internal</h3>
-          <p class="meta"><span class="pill dev">In development</span><span class="price">Pricing soon</span></p>
-        </div>
-      </a>
+        <p class="count">2 products</p>
+      </div>
+      <div class="cards">
+        <a class="card" href="/products/cs2-internal.html">
+          <img src="/assets/card-cs2.webp" width="749" height="999" alt="" loading="lazy">
+          <div class="card-body">
+            <h3>CS2 Internal</h3>
+            <p class="from">Starting from <span class="accent">soon</span></p>
+          </div>
+        </a>
+        <a class="card" href="/products/deadlock-internal.html">
+          <div class="card-art" aria-hidden="true"><svg class="mark" viewBox="-40 -28 72 56"><polygon class="stem" points="-14,-24 -5,-24 -9,24 -18,24"/><polygon class="arm" points="-3,-2 15,-24 27,-24 8,-2"/><polygon class="arm" points="1,4 12,4 29,24 17,24"/><polygon class="wedge w1" points="-19,-13.4 -19,-8.6 -29,-11"/><polygon class="wedge w2" points="-20,-1.4 -20,3.4 -35,1"/><polygon class="wedge w3" points="-21,10.6 -21,15.4 -31,13"/></svg></div>
+          <div class="card-body">
+            <h3>Deadlock Internal</h3>
+            <p class="from">Starting from <span class="accent">soon</span></p>
+          </div>
+        </a>
+      </div>
     </div>
   </section>
 
-  <section class="trio">
-    <div>
-      <h3>Support</h3>
-      <p>Real people on Discord, the same ones writing the code.</p>
+  <section class="why">
+    <div class="wrap center">
+      <p class="badge"><span class="dot"></span>No fluff</p>
+      <h2>What you're <span class="accent">actually</span> paying for</h2>
+      <p class="sub">A small team that plays the games it builds for. This is what that gets you.</p>
+      <div class="tiles">
+        <div class="tile">
+          <div class="tile-icon"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 3h12v8H6l-3 3v-3H2z" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></div>
+          <h3>Support</h3>
+          <p>Real people on Discord, the same ones writing the code. Open a ticket or just ping us.</p>
+        </div>
+        <div class="tile">
+          <div class="tile-icon"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M9 1L3 9h5l-1 6 6-8H8z" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></div>
+          <h3>Updates</h3>
+          <p>Offsets come from the game itself, so most patches change nothing. When one does, it's fixed before it's back on the status page.</p>
+        </div>
+        <div class="tile">
+          <div class="tile-icon"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1l6 2v5c0 4-3 6-6 7-3-1-6-3-6-7V3z M5 8l2 2 4-4" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></div>
+          <h3>Testing</h3>
+          <p>Every build is played before it ships, and the status page is written by hand after playing it.</p>
+        </div>
+      </div>
     </div>
-    <div>
-      <h3>Updates</h3>
-      <p>Offsets resolve from the game itself, so most patches change nothing. When one does, it's fixed before it's back on the status page.</p>
-    </div>
-    <div>
-      <h3>Testing</h3>
-      <p>Every build is played before it ships. The status page is updated by hand, not by a bot.</p>
+  </section>
+
+  <section class="vouches" id="vouches">
+    <div class="wrap center">
+      <p class="badge"><span class="dot"></span>From #vouches</p>
+      <h2>Pasted from <span class="accent">Discord</span></h2>
+      <p class="sub"><span class="accent">0 vouches</span> so far. They'll be pasted as typed, typos and all.</p>
+      <div class="quotes">
+        <div class="quote placeholder"><p class="stars" aria-hidden="true">★★★★★</p><p>This space is for the first one.</p><p class="who"><span class="avatar">?</span>soon</p></div>
+        <div class="quote placeholder"><p class="stars" aria-hidden="true">★★★★★</p><p>And the second.</p><p class="who"><span class="avatar">?</span>soon</p></div>
+        <div class="quote placeholder"><p class="stars" aria-hidden="true">★★★★★</p><p>And the third.</p><p class="who"><span class="avatar">?</span>soon</p></div>
+      </div>
     </div>
   </section>
 
   <section class="discord" id="discord">
-    <p class="kicker">Discord</p>
-    <h2>Updates as they land.</h2>
-    <p class="text">Status, test footage, support, and the keys when they exist.</p>
-    <span class="btn soon">Coming soon</span>
+    <div class="wrap center">
+      <p class="badge"><span class="dot"></span>Discord</p>
+      <h2>Keys, status, <span class="accent">support</span></h2>
+      <p class="sub">The server opens with the first product.</p>
+      <span class="btn soon">Coming soon</span>
+    </div>
   </section>
 
 </main>
 
 <footer class="foot">
-  <div class="foot-brand">
-    <span class="word">KINETIC</span>
-    <p>Built by people who play. Tested before release.</p>
+  <div class="foot-in">
+    <div class="foot-brand">
+      <a class="brand" href="/" aria-label="Kinetic">
+        <svg class="mark" viewBox="-40 -28 72 56" aria-hidden="true"><polygon class="stem" points="-14,-24 -5,-24 -9,24 -18,24"/><polygon class="arm" points="-3,-2 15,-24 27,-24 8,-2"/><polygon class="arm" points="1,4 12,4 29,24 17,24"/><polygon class="wedge w1" points="-19,-13.4 -19,-8.6 -29,-11"/><polygon class="wedge w2" points="-20,-1.4 -20,3.4 -35,1"/><polygon class="wedge w3" points="-21,10.6 -21,15.4 -31,13"/></svg>
+        <span class="word">INETIC<span class="tld">.ong</span></span>
+      </a>
+      <p>Built by people who play. Updated when the game does, tested before release.</p>
+      <a class="icon-btn" href="/#discord" aria-label="Discord"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 4a12 12 0 0110 0l1 7-3 2-1-2H6l-1 2-3-2zM6 9h.01M10 9h.01" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></a>
+    </div>
+    <div class="foot-col">
+      <p class="foot-head">Platform</p>
+      <a href="/products.html">Products</a>
+      <a href="/#discord">Dashboard</a>
+      <a href="/#discord">Support</a>
+      <a href="/status.html">Status</a>
+      <a href="/#discord">Resellers</a>
+    </div>
+    <div class="foot-col">
+      <p class="foot-head">Legal</p>
+      <a href="/terms.html">Terms of Service</a>
+      <a href="/privacy.html">Privacy Policy</a>
+      <a href="/refunds.html">Refund Policy</a>
+    </div>
   </div>
-  <div class="foot-col">
-    <p class="foot-head">Platform</p>
-    <a href="/#products">Products</a>
-    <a href="/status.html">Status</a>
-    <a href="/#discord">Support</a>
-  </div>
-  <div class="foot-col">
-    <p class="foot-head">Legal</p>
-    <a href="/terms.html">Terms of Service</a>
-    <a href="/privacy.html">Privacy Policy</a>
-    <a href="/refunds.html">Refund Policy</a>
-  </div>
-  <p class="copy">kinetic.ong</p>
+  <p class="copy">© 2026 KINETIC.ONG</p>
 </footer>
 
 <script src="/script.js"></script>

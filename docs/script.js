@@ -1,11 +1,23 @@
-// The hero reel only shows once it can actually play, so a missing or slow
-// file leaves the hero plain rather than a broken frame.
+// Product page: the tier buttons select, the stepper counts. Nothing is
+// bought here yet, so the numbers stay on the page.
 (function () {
-  var reel = document.getElementById('reel');
-  if (reel) reel.addEventListener('canplay', function () { reel.classList.add('live'); });
+  var tiers = document.querySelectorAll('.tier');
+  tiers.forEach(function (t) {
+    t.addEventListener('click', function () {
+      tiers.forEach(function (o) { o.classList.remove('on'); });
+      t.classList.add('on');
+    });
+  });
+  var qty = document.getElementById('qty');
+  document.querySelectorAll('.qbtn').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var n = parseInt(qty.textContent, 10) + parseInt(b.dataset.qty, 10);
+      qty.textContent = Math.max(1, Math.min(10, n));
+    });
+  });
 
-  // The wheel is left to the page. The strip moves by its arrows, a trackpad,
-  // shift plus wheel, or by dragging it with the mouse.
+  // The gallery strip moves by trackpad, shift plus wheel, or dragging it.
+  // The plain wheel is left to the page.
   var strip = document.getElementById('strip');
   if (strip) {
     var dragging = false, startX = 0, startLeft = 0, moved = false;
@@ -25,12 +37,5 @@
     strip.addEventListener('pointerup', release);
     strip.addEventListener('pointercancel', release);
     strip.addEventListener('click', function (e) { if (moved) e.preventDefault(); }, true);
-    function step(dir) {
-      var first = strip.querySelector('figure');
-      var w = first ? first.getBoundingClientRect().width + 20 : strip.clientWidth * .8;
-      strip.scrollBy({ left: dir * w, behavior: 'smooth' });
-    }
-    document.getElementById('prev').addEventListener('click', function () { step(-1); });
-    document.getElementById('next').addEventListener('click', function () { step(1); });
   }
 })();
